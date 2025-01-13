@@ -1,7 +1,7 @@
 const fs = require("fs").promises;
 
-const getSum = (k, index, soma) =>
-  k < index ? getSum((k = k + 1), index, (soma = k + soma)) : soma;
+const getSum = (k, index, sum) =>
+  k < index ? getSum((k = k + 1), index, (sum = k + sum)) : sum;
 
 const isFibonacci = (n, a = 0, b = 1) =>
   n === a ? true : n < a ? false : isFibonacci(n, b, a + b);
